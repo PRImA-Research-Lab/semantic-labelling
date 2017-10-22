@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LabelTypeHierarchies version="1">
+    <LabelType name="processing-step" caption="Processing Step">
+        <Description></Description>
+        <LabelType name="dia-step" caption="Document Image Analysis Step">
+            <LabelType name="image-acquisition" caption="Image Acquisition">
+            </LabelType>
+            <LabelType name="image-preprocessing" caption="Image Pre-Processing">
+            </LabelType>
+            <LabelType name="geometric-correction" caption="Geometric Correction">
+            </LabelType>
+            <LabelType name="segmentation" caption="Segmentation">
+            </LabelType>
+            <LabelType name="classification" caption="Classification">
+            </LabelType>
+            <LabelType name="recognition" caption="Recognition">
+            </LabelType>
+            <LabelType name="post-processing" caption="Post-Processing">
+            </LabelType>
+             <LabelType name="reconstruction" caption="Reconstruction">
+            </LabelType>
+        </LabelType>
+    </LabelType>
+    <LabelType name="application" caption="Application">
+        <LabelType name="data-processing" caption="Data Processing">
+        </LabelType>
+        <LabelType name="performance-analysis" caption="Performance Analysis">
+            <LabelType name="comparative" caption="Comparative Analysis">
+            </LabelType>
+            <LabelType name="in-depth" caption="In-depth Analysis">
+            </LabelType>
+        </LabelType>
+        <LabelType name="tool-settings" caption="Tool Settings">
+        </LabelType>
+    </LabelType>
+</LabelTypeHierarchies>

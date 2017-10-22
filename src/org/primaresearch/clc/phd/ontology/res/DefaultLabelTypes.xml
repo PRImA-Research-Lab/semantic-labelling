@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><Ontology>
+  <LabelTypeHierarchies>
+    <LabelType caption="Domain" name="domain">
+      <Description>A specific step in a processing pipeline of within certain domain.</Description>
+      <LabelType caption="Document Image Analysis" name="dia">
+        <LabelType caption="Image Processing" name="image-processing"/>
+        <LabelType caption="Image Pre-Processing" name="image-preprocessing"/>
+        <LabelType caption="Geometric Correction" name="geometric-correction"/>
+        <LabelType caption="Segmentation" name="segmentation">
+          <LabelType caption="Region/Block" name="region"/>
+          <LabelType caption="Text Line" name="text-line"/>
+          <LabelType caption="Word" name="word"/>
+          <LabelType caption="Glyph/Character" name="glyph"/>
+        </LabelType>
+        <LabelType caption="Classification" name="classification">
+          <LabelType caption="Region/Block" name="region"/>
+        </LabelType>
+        <LabelType caption="Recognition" name="recognition">
+          <LabelType caption="OCR" name="ocr"/>
+          <LabelType caption="Structure" name="structure">
+            <LabelType caption="Reading Order" name="reading-order"/>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Post-Processing" name="post-processing"/>
+        <LabelType caption="Reconstruction" name="reconstruction"/>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Processing Type" name="processing-type">
+      <LabelType caption="Analysis/Recognition" name="analysis"/>
+      <LabelType caption="Enhancement" name="enhancement">
+        <LabelType caption="Comparative Analysis" name="comparative"/>
+        <LabelType caption="In-depth Analysis" name="in-depth"/>
+      </LabelType>
+      <LabelType caption="Conversion" name="conversion"/>
+      <LabelType caption="Acquisition" name="acquisition"/>
+    </LabelType>
+    <LabelType caption="Age" name="age">
+      <Description>Age of data to process</Description>
+      <LabelType caption="Historical" name="historical"/>
+      <LabelType caption="Contemporary" name="contemporary"/>
+    </LabelType>
+    <LabelType caption="Producer" name="producer">
+      <Description>Data producer</Description>
+      <LabelType caption="Human" name="human">
+        <LabelType caption="Expert" name="expert"/>
+        <LabelType caption="Crowd" name="crowd">
+          <Description>Crowdsourcing</Description>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Machine" name="machine">
+        <LabelType caption="Printer" name="printer"/>
+        <LabelType caption="Typewriter" name="typewriter"/>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Source Medium" name="source-medium">
+      <Description>Original data medium</Description>
+      <LabelType caption="Phyisical" name="physical">
+        <LabelType caption="Book" name="book"/>
+        <LabelType caption="Newspaper" name="newspaper"/>
+      </LabelType>
+      <LabelType caption="Virtual" name="virtual"/>
+    </LabelType>
+    <LabelType caption="Digitisation Method" name="digitisation-method">
+      <LabelType caption="Scanner" name="scanner"/>
+      <LabelType caption="Camera" name="camera"/>
+    </LabelType>
+    <LabelType caption="Automation" name="automation">
+      <LabelType caption="Manual" name="manual">
+        <Description>Human interaction required</Description>
+      </LabelType>
+      <LabelType caption="Automated" name="automated"/>
+    </LabelType>
+    <LabelType caption="Production Method" name="production-method">
+      <LabelType caption="Manual" name="manual">
+        <Description>E.g. by hand</Description>
+      </LabelType>
+      <LabelType caption="Machine" name="machine">
+        <LabelType caption="Printed" name="printed"/>
+        <LabelType caption="Typewritten" name="typewritten"/>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Content Type" name="content-type">
+      <LabelType caption="Data" name="data"/>
+      <LabelType caption="Metadata" name="metadata">
+        <LabelType caption="General" name="general"/>
+        <LabelType caption="Quality" name="quality">
+          <LabelType caption="Performance Information" name="performance-info"/>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Settings" name="settings">
+        <Description>E.g. tool configuration</Description>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Precision" name="precision">
+      <LabelType caption="Ground Truth" name="ground-truth"/>
+      <LabelType caption="Measured" name="measured"/>
+      <LabelType caption="Estimated" name="estimated"/>
+      <LabelType caption="Random" name="random"/>
+    </LabelType>
+    <LabelType caption="License" name="license">
+      <LabelType caption="Free" name="free"/>
+      <LabelType caption="Paid for" name="paid-for">
+        <LabelType caption="Pay once" name="pay-once"/>
+        <LabelType caption="Volume" name="volume"/>
+        <LabelType caption="Subscription" name="subscription"/>
+      </LabelType>
+    </LabelType>
+  </LabelTypeHierarchies>
+  <ActivityLabelSlots>
+    <LabelSlotGroup name="processing-type" slots="3"/>
+    <LabelSlotGroup name="automation" slots="1"/>
+    <LabelSlotGroup name="license" slots="1"/>
+  </ActivityLabelSlots>
+  <DataObjectLabelSlots>
+    <LabelSlotGroup name="domain" slots="10"/>
+    <LabelSlotGroup name="producer" slots="1"/>
+    <LabelSlotGroup name="source-medium" slots="1"/>
+    <LabelSlotGroup name="age" slots="1"/>
+    <LabelSlotGroup name="production-method" slots="1"/>
+    <LabelSlotGroup name="digitisation-method" slots="1"/>
+    <LabelSlotGroup name="content-type" slots="1"/>
+    <LabelSlotGroup name="precision" slots="1"/>
+  </DataObjectLabelSlots>
+</Ontology>

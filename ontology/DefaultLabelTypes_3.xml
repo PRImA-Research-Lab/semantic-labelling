@@ -1,0 +1,1687 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Ontology version="3">
+  <LabelTypeHierarchies>
+    <LabelType caption="Age" name="age">
+      <Description>Age of data to process</Description>
+      <LabelType caption="Historical" name="historical">
+        <Description>Of or concerning history or past events</Description>
+        <LabelType caption="Medieval" name="medieval">
+          <Description>Relating to the Middle Ages.</Description>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Contemporary" name="contemporary">
+        <Description>Belonging to or occurring in the present</Description>
+      </LabelType>
+      <LabelType caption="Ancient" name="ancient">
+        <Description>Belonging to the very distant past and no longer in existence.</Description>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Automation" name="automation">
+      <LabelType caption="Manual" name="manual">
+        <Description>Human interaction required
+
+Examples:
+Ground truthing
+
+Related:
+Performance evaluation</Description>
+      </LabelType>
+      <LabelType caption="Automated" name="automated">
+        <Description>No interaction required
+
+Examples:
+OCR
+
+Related:
+Machine learning</Description>
+      </LabelType>
+      <LabelType caption="Machine assisted / user-driven" name="assisted">
+        <Description>Some automation, but user interaction possible / required
+
+Examples:
+Auto-completion when typing
+
+Related:
+Trainable,
+Interactive</Description>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Physical Production Method" name="production-method">
+      <Description>Production method of physical document (e.g. paper document such as a book)</Description>
+      <LabelType caption="Manual" name="manual">
+        <Description>E.g. handwritten</Description>
+      </LabelType>
+      <LabelType caption="Machine" name="machine">
+        <LabelType caption="Printed" name="printed">
+          <LabelType caption="Typeset" name="typeset">
+            <Description>Printed using typesetting method</Description>
+          </LabelType>
+          <LabelType caption="Computer printout" name="computer">
+            <Description>Printed from computer or other electronic device using an office or similar printer</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Typewritten" name="typewritten"/>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Content Type" name="content-type">
+      <LabelType caption="Data" name="data"/>
+      <LabelType caption="Metadata" name="metadata">
+        <LabelType caption="Quality" name="quality">
+          <LabelType caption="Performance Information" name="performance-info"/>
+        </LabelType>
+        <LabelType caption="Features" name="features">
+          <Description>Extracted features
+
+Examples:
+Word count of a text
+
+Related:
+Information extraction,
+Machine learning</Description>
+        </LabelType>
+        <LabelType caption="Structure" name="structure">
+          <Description>Structure of an object of some sort
+
+Examples:
+Document structure,
+Table structure</Description>
+          <LabelType caption="Table of contents" name="toc">
+            <Description>Table of contents of a book, newspaper etc.</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Annotations" name="annotations">
+          <Description>Added data</Description>
+        </LabelType>
+        <LabelType caption="Authorship" name="authorship">
+          <Description>Author attribution / information</Description>
+        </LabelType>
+        <LabelType caption="Spatial" name="spatial">
+          <Description>Relating to space</Description>
+          <LabelType caption="Location" name="location">
+            <Description>Location or position</Description>
+          </LabelType>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Settings" name="settings">
+        <Description>E.g. tool configuration</Description>
+      </LabelType>
+      <LabelType caption="Model" name="model">
+        <Description>A model for a concept.
+
+Examples:
+Page model to aid recognition</Description>
+      </LabelType>
+      <LabelType caption="Lexicon / index" name="lexicon">
+        <Description>A collection of data items organised / sorted in a certain way.
+
+Lexicon: the vocabulary of a person, language, or branch of knowledge</Description>
+      </LabelType>
+      <LabelType caption="Corpus / database" name="corpus">
+        <Description>
+Corpus: a collection of written texts, especially the entire works of a particular author or a body of writing on a particular subject.
+
+Examples:
+A text corpus,
+An image database</Description>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Precision" name="precision">
+      <LabelType caption="Ground Truth / gold standard" name="ground-truth">
+        <Description>Ground truth is a term used in various fields to refer to information provided by direct observation as opposed to information provided by inference.
+Gold standard: the best available under reasonable conditions</Description>
+      </LabelType>
+      <LabelType caption="Measured" name="measured">
+        <Description>Measured (precise)
+
+Examples:
+OCR performance measured using ground truth</Description>
+      </LabelType>
+      <LabelType caption="Estimated" name="estimated">
+        <Description>Estimated by machine or human (not precise)</Description>
+      </LabelType>
+      <LabelType caption="Random" name="random">
+        <Description>Random data of some sort.
+
+Examples:
+a random number between 1 and 6 (dice)</Description>
+      </LabelType>
+      <LabelType caption="Fuzzy" name="fuzzy">
+        <Description>Statistical data are not always precise numbers, or vectors, or categories. Real data are frequently what is called fuzzy. Examples where this fuzziness is obvious are quality of life data, environmental, biological, medical, sociological and economics data. Also the results of measurements can be best described by using fuzzy numbers and fuzzy vectors respectively.</Description>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Licence" name="license">
+      <Description>Software or data usage licence</Description>
+      <LabelType caption="Free" name="free">
+        <LabelType caption="Non-commercial" name="non-commercial">
+          <Description>Free for non-commercial use</Description>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Paid for" name="paid-for">
+        <LabelType caption="Pay once" name="pay-once"/>
+        <LabelType caption="Volume" name="volume"/>
+        <LabelType caption="Subscription" name="subscription"/>
+      </LabelType>
+      <LabelType caption="Open Source" name="openSource">
+        <Description>Open-source software (OSS) is computer software with its source code made available with a license in which the copyright holder provides the rights to study, change, and distribute the software to anyone and for any purpose.
+
+Related:
+Free / paid for</Description>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Platform" name="platform">
+      <Description>Supported platform</Description>
+      <LabelType caption="Windows" name="windows"/>
+      <LabelType caption="Mac OS" name="macos"/>
+      <LabelType caption="Linux" name="linux"/>
+      <LabelType caption="Platform independent" name="platform-independent">
+        <LabelType caption="Java" name="java"/>
+        <LabelType caption="Web" name="web">
+          <Description>Web service or web app</Description>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Mobile" name="mobile">
+        <LabelType caption="iOS" name="ios"/>
+        <LabelType caption="Android" name="android"/>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Content Encoding" name="content-encoding">
+      <LabelType caption="Textual" name="textual">
+        <LabelType caption="Annotated" name="annotated">
+          <Description>Textual content with annotations</Description>
+        </LabelType>
+        <LabelType caption="Natural language" name="natural-language">
+          <Description>Text represents natural language. 
+
+Examples:
+A news artcile
+
+Related:
+</Description>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Structured" name="structured">
+        <Description>E.g. XML</Description>
+        <LabelType caption="Tabular" name="tabular">
+          <Description>Content encoded in tabular form
+
+Examples:
+A tab-separated table with headings and values</Description>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Raster image" name="image">
+        <LabelType caption="Colour Image" name="colour"/>
+        <LabelType caption="Bitonal" name="bitonal"/>
+      </LabelType>
+      <LabelType caption="Mathematical / geometrical" name="mathematical">
+        <LabelType caption="Vector-based" name="vector-based">
+          <Description>E.g. polygonal</Description>
+          <LabelType caption="Stroke-based" name="stroke-based">
+            <Description>
+
+Examples:
+Online handwriting</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Polygonal" name="polygonal"/>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Activity Domain" name="activityDomain">
+      <Description>General domain, research field or specific processing strategy of a workflow activty.
+
+Examples:
+An activity for automated number plate recognition could be labelled with "OCR" domain.
+
+Related:
+"Topic" of a data object</Description>
+      <LabelType caption="Computing" name="computing">
+        <Description>Computing is any goal-oriented activity requiring, benefiting from, or creating a mathematical sequence of steps known as an algorithm — e.g. through computers.
+
+Examples:
+Any activity in document image analysis is from the domain of computing. Only steps such as physical document restoration should be excluded.
+
+Related:
+Data object "topic" such as Engineering</Description>
+        <LabelType caption="Visual Computing" name="visual">
+          <Description>Visual computing is a generic term for all computer science disciplines handling with images and 3D models, i.e. computer graphics, image processing, visualization, computer vision, virtual and augmented reality, video processing, but also includes aspects of pattern recognition, human computer interaction, machine learning and digital libraries.
+
+Examples:
+See above
+
+Related:
+"Machine Learning" (separate label type)</Description>
+          <LabelType caption="Image and video processing" name="imgVidProc">
+            <Description>Image processing is processing of images using mathematical operations by using any form of signal processing for which the input is an image, a series of images, or a video, such as a photograph or video frame.
+Video processing is a particular case of signal processing, which often employs video filters and where the input and output signals are video files or video streams.
+
+Examples:
+Binarisation of a colour image
+
+Related:
+Content analysis (for information extraction)
+Computer graphics (for visualisation)</Description>
+            <LabelType caption="Geometric image/video processing" name="geometric">
+              <Description>Affine transsformation or other geometric operation applied to an image / video.
+An affine transformation is an important class of linear 2-D geometric transformations which maps variables (e.g. pixel intensity values located at position Eqn:eqnxy1 in an input image) into new variables (e.g. Eqn:eqnxy2 in an output image) by applying a linear combination of translation, rotation, scaling and/or shearing (i.e. non-uniform scaling in some directions) operations.
+
+Examples:
+Rotation, dewarping
+
+Related:
+Pixel-based operations</Description>
+            </LabelType>
+            <LabelType caption="Pixel-based image/video processing" name="pixel-based">
+              <Description>Any image operation on pixel-level
+
+Examples:
+Binarisation, morphological operations
+
+Related:
+Geometric processing</Description>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="Content analysis and recognition" name="analysisRecognition">
+            <Description>Content analysis is "a wide and heterogeneous set of manual or computer-assisted techniques for contextualized interpretations of documents produced by communication processes in the strict sense of that phrase (any kind of text, written, iconic, multimedia, etc.) or signification processes (traces and artifacts), having as ultimate goal the production of valid and trustworthy inferences."
+
+Examples:
+Text recognition / OCR
+
+Related:
+Text processing (separate categoty)
+Performance evaluation (separate categoty)</Description>
+            <LabelType caption="Text and symbol recognition" name="text">
+              <Description>Translation of any kind of depicted symbols to machine readable format
+
+Examples:
+OCR
+Mathematical equation recognition
+
+Related:
+Text processing (separate category)
+Table recognition
+Map reading</Description>
+              <LabelType caption="OCR" name="ocr">
+                <Description>Optical character recognition (optical character reader, OCR) is the mechanical or electronic conversion of images of typed, handwritten or printed text into machine-encoded text, whether from a scanned document, a photo of a document, a scene-photo (for example the text on signs and billboards in a landscape photo) or from subtitle text superimposed on an image (for example from a television broadcast).
+
+Examples:
+Number plate reading
+
+Related:
+Mathematical equation recognition
+Map reading</Description>
+              </LabelType>
+              <LabelType caption="Mathematical expression recognition" name="maths">
+                <Description>Specialised recognition of mathematical equations / formulas.
+
+Examples:
+Equations in scientific papers
+
+Related:
+OCR</Description>
+              </LabelType>
+              <LabelType caption="Date recognition" name="date">
+                <Description>Specialised recognition of dates and times
+
+Examples:
+Date printed on newspaper page
+
+Related:
+OCR</Description>
+              </LabelType>
+            </LabelType>
+            <LabelType caption="Table / form analysis and recognition" name="tables">
+              <Description>The recognition of table/form structure and/or contents. 
+
+Examples:
+Stock exchange data in a newspaper,
+Filled in questionaire form
+
+Related:
+OCR
+Object / shape recognition (e.g. table separator detection)</Description>
+            </LabelType>
+            <LabelType caption="Chart recognition" name="charts">
+              <Description>Recognition or analysis of data charts.
+
+Examples:
+Pie chart,
+Bar chart,
+Graphs
+
+Related:
+OCR,
+Object / shape recognition</Description>
+            </LabelType>
+            <LabelType caption="Map and plan reading" name="maps">
+              <Description>Recognition and analysis of maps or plans of any kind.
+
+Examples:
+Floor plans,
+Engineering drawings,
+Geographical maps
+
+Related:
+OCR,
+Object / shape recognition</Description>
+            </LabelType>
+            <LabelType caption="Object / shape recognition" name="shape">
+              <Description>Object recognition is a process for identifying a specific object in a digital image or video. Object recognition algorithms rely on matching, learning, or pattern recognition algorithms using appearance-based or feature-based techniques. Common techniques include edges, gradients, Histogram of Oriented Gradients (HOG), Haar wavelets, and linear binary patterns.
+
+Examples:
+Logo recognition
+Fingerprint reading
+
+Related:
+Machine learning,
+Text and symbol recognition
+Forensic studies</Description>
+              <LabelType caption="Face recognition" name="face">
+                <Description>A facial recognition system is a computer application capable of identifying or verifying a person from a digital image or a video frame from a video source. One of the ways to do this is by comparing selected facial features from the image and a facial database.
+
+Examples:
+Smartphone unlocking via detection of owner's face
+
+Related:
+Machine learning (separate category)</Description>
+              </LabelType>
+            </LabelType>
+            <LabelType caption="Layout analysis" name="layoutAnalysis">
+              <Description>In computer vision, document layout analysis is the process of identifying and categorizing the regions of interest in the scanned image of a text document. A reading system requires the segmentation of text zones from non-textual ones and the arrangement in their correct reading order.
+
+Examples:
+Page layout analysis (segmentation into regions, classification into text, graphic, table etc.)
+
+Related:
+"OCR": Often used as a synonym for layout analysis and text recognition, but strictly only the text recognition component.</Description>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="Computer graphics" name="graphics">
+            <Description>Computer graphics are pictures and movies created using computers - usually referring to image data created by a computer specifically with help from specialized graphical hardware and software.
+
+Example:
+Text rendering
+
+Related:
+Presentation / visualisation (part of Data Creation / Transformation)</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Text processing" name="text">
+          <Description>In computing, the term text processing refers to the discipline of mechanizing the creation or manipulation of electronic text. Text usually refers to all the alphanumeric characters specified on the keyboard of the person performing the mechanization, but in general text here means the abstraction layer that is one layer above the standard character encoding of the target text. The term processing refers to automated (or mechanized) processing, as opposed to the same manipulation done manually.
+
+Text processing involves computer commands which invoke content, content changes, and cursor movement, for example to
+- search and replace
+- format
+- generate a processed report of the content of, or
+- filter a file or report of a text file.
+
+Related:
+Text recognition (Visual Computing)</Description>
+          <LabelType caption="Natural language processing" name="naturalLanguage">
+            <Description>Natural language processing (NLP) is a field of computer science, artificial intelligence, and computational linguistics concerned with the interactions between computers and human (natural) languages. As such, NLP is related to the area of human–computer interaction. Many challenges in NLP involve: natural language understanding, enabling computers to derive meaning from human or natural language input; and others involve natural language generation.
+
+Examples:
+Digitial assistents (e.g. in smartphones)
+
+Related:
+OCR</Description>
+            <LabelType caption="Language identification" name="identification">
+              <Description>In natural language processing, language identification or language guessing is the problem of determining which natural language given content is in.
+
+Examples:
+Language identification to select a dictionary for OCR applications
+
+Related:
+OCR</Description>
+            </LabelType>
+            <LabelType caption="Sentiment mining" name="sentiment">
+              <Description>Sentiment analysis (also known as opinion mining) refers to the use of natural language processing, text analysis and computational linguistics to identify and extract subjective information in source materials.
+
+Examples:
+A basic task in sentiment analysis is classifying the polarity of a given text at the document, sentence, or feature/aspect level — whether the expressed opinion in a document, a sentence or an entity feature/aspect is positive, negative, or neutral.
+
+Related:
+Summarising</Description>
+            </LabelType>
+            <LabelType caption="Summarising" name="summarising">
+              <Description>Automatic summarization is the process of reducing a text document with a computer program in order to create a summary that retains the most important points of the original document. Technologies that can make a coherent summary take into account variables such as length, writing style and syntax.
+
+Examples:
+Automatic summary of a news article
+
+Related:
+Sentiment mining</Description>
+            </LabelType>
+            <LabelType caption="Part-of-speech tagging" name="partOfSpeech">
+              <Description>In corpus linguistics, part-of-speech tagging (POS tagging or POST), also called grammatical tagging or word-category disambiguation, is the process of marking up a word in a text (corpus) as corresponding to a particular part of speech, based on both its definition and its context—i.e., its relationship with adjacent and related words in a phrase, sentence, or paragraph.
+
+Examples:
+A simplified form of this is commonly taught to school-age children, in the identification of words as nouns, verbs, adjectives, adverbs, etc.
+
+Related:
+Named entitiy recognition,
+Tokenisation (as part of Data creation / transformation)</Description>
+            </LabelType>
+            <LabelType caption="Named entity recognition" name="namedEntities">
+              <Description>Named-entity recognition (NER) (also known as entity identification, entity chunking and entity extraction) is a subtask of information extraction that seeks to locate and classify named entities in text into pre-defined categories such as the names of persons, organizations, locations, expressions of times, quantities, monetary values, percentages, etc.
+
+Related:
+Part-of-speech tagging
+Summarising</Description>
+            </LabelType>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Machine learning" name="machineLearning">
+          <Description>Machine learning is a subfield of computer science[1] that evolved from the study of pattern recognition and computational learning theory in artificial intelligence. In 1959, Arthur Samuel defined machine learning as a "Field of study that gives computers the ability to learn without being explicitly programmed". Machine learning explores the study and construction of algorithms that can learn from and make predictions on data.
+
+Examples:
+Decision tree learning,
+Artificial neural networks
+
+Related:
+Content analysis and recognition
+</Description>
+        </LabelType>
+        <LabelType caption="Information Management" name="informationManagement">
+          <Description>Information management (IM) concerns a cycle of organisational activity: the acquisition of information from one or more sources, the custodianship and the distribution of that information to those who need it, and its ultimate disposition through archiving or deletion.
+Data management comprises all the disciplines related to managing data as a valuable resource.
+
+Examples:
+Data access,
+Data security
+Document management system
+
+Related:
+Visualistation (as part of Data Creation / Transformation)</Description>
+          <LabelType caption="Data retrieval" name="retrieval">
+            <Description>Data retrieval means obtaining data from a database management system such as ODBMS. In this case, it is considered that data is represented in a structured way, and there is no ambiguity in data. In order to retrieve the desired data the user present a set of criteria by a query.
+
+Examples:
+Retrieval of image from image database using pattern matching
+
+Related:
+Visualisation</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Performance evaluation" name="performanceEval">
+          <Description>Measuring the performance of a given software system or method, returning for instance a quality value.
+
+Examples:
+OCR accuracy measurement
+
+Related:
+Information extraction
+Pattern matching</Description>
+          <LabelType caption="Comparative performance analysis" name="comparative">
+            <Description>Basic comparison of software systems or methods to decide which is better under given circumstances.
+
+Examples:
+Number of correctly recognised words of two OCR engines
+
+Related:
+Information extraction
+Ground truth</Description>
+          </LabelType>
+          <LabelType caption="In-depth performance analysis" name="in-depth">
+            <Description>Performance analysis providing detail on the evaluation result in order to be able to understand the result and improve the methods / systems under investigation.
+
+Examples:
+Region-based layout analysis performance with merges, splits, misses, false detections etc.,
+OCR accuracy with recognition statistics per character class
+
+Related:
+Information retrieval</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Forensic studies" name="forensics">
+          <Description>Forensic science is the application of science to criminal and civil laws. Forensic scientists collect, preserve, and analyze scientific evidence during the course of an investigation.
+
+Examples:
+Document verification / counterfeit detection
+
+Related:
+Face recognition</Description>
+        </LabelType>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Processing Level" name="processingLevel">
+      <Description>Distinction between low-level data processing (e.g. using a mathematical formula) and high-level processing that entails some form of recognition, reasoning or matching.</Description>
+      <LabelType caption="Low-level processing" name="low-level">
+        <Description>Data processing involving basic conversion, application of mathematical formulas or similar
+
+Examples:
+Image thresholding
+Image smoothing
+Text chunking (e.g. splitting into words)
+
+Related:
+Several visual computing approaches</Description>
+      </LabelType>
+      <LabelType caption="High-level processing" name="high-level">
+        <Description>Processing that entails some form of recognition, reasoning or matching, for example.
+
+Examples:
+OCR
+Face recognition
+
+Related:
+Natural language processing,
+Content analysis and recognition</Description>
+        <LabelType caption="Detection / Identification" name="detection">
+          <Description>Methods involving some form of detection, identification, location or matching.
+
+Examples:
+Writer identification,
+Logo detection
+
+Related:
+Object recognition,
+OCR,
+Machine learning</Description>
+          <LabelType caption="Verification / authentication" name="verification">
+            <Description>Authentication (from Greek: αὐθεντικός authentikos, "real, genuine", from αὐθέντης authentes, "author") is the act of confirming the truth of an attribute of a single piece of data (a datum) claimed true by an entity. In contrast with identification which refers to the act of stating or otherwise indicating a claim purportedly attesting to a person or thing's identity, authentication is the process of actually confirming that identity.
+
+Examples:
+Signature verification
+
+Related:
+Forensic studies,
+Content analysis and recognition</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Classification / recognition" name="classification">
+          <Description>In machine learning and statistics, classification is the problem of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known.
+
+Pattern recognition is a branch of machine learning that focuses on the recognition of patterns and regularities in data, although it is in some cases considered to be nearly synonymous with machine learning.
+
+Examples:
+OCR
+
+Related:
+Machine learning,
+Content analysis and recognition</Description>
+        </LabelType>
+        <LabelType caption="Understanding" name="understanding">
+          <Description>Highest level of processing including reasoning based on the actual meaning of the data that is beaing processed.
+
+Examples:
+Natural language understanding
+
+Related:
+Machine learning,
+Content analysis and recognition,
+Natural language processing</Description>
+        </LabelType>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Data Creation / Transformation" name="dataTransformation">
+      <Description>Any action to creates or transforms data.
+
+Examples:
+Image acquisition,
+conversion,
+Text tokenisation,
+Annotation,
+Extraction</Description>
+      <LabelType caption="Acquisition" name="acquisition">
+        <Description>Data acquisition is the process of sampling signals that measure real world physical conditions and converting the resulting samples into digital numeric values that can be manipulated by a computer. Data acquisition systems, abbreviated by the acronyms DAS or DAQ, typically convert analog waveforms into digital values for processing. The components of data acquisition systems include:
+
+Sensors, to convert physical parameters to electrical signals.
+Signal conditioning circuitry, to convert sensor signals into a form that can be converted to digital values.
+Analog-to-digital converters, to convert conditioned sensor signals to digital values.
+
+Related:
+Conversion
+Retrieval</Description>
+      </LabelType>
+      <LabelType caption="Conversion" name="conversion">
+        <Description>Data conversion is the conversion of computer data from one format to another.
+
+Examples:
+JPG image to PNG image,
+UTF-8 encoded text to ASCII
+
+Related:
+Low-level processing</Description>
+      </LabelType>
+      <LabelType caption="Segmentation / tokenisation" name="segmentation">
+        <Description>Splitting data into distinct parts or demarking the points where to split.
+
+Examples:
+Document page segmentation,
+Image segmentation,
+Foreground-background separation,
+Text tokeinsation / chunking
+
+Related:
+Content analysis / recognition
+Annotation / labelling</Description>
+      </LabelType>
+      <LabelType caption="Enhancement" name="enhancement">
+        <Description>Removal of unwanted parts of data or adding/correcting data to improve readability, quality. Pre- or postprocessing of some kind.
+
+Examples:
+Noise removal in images,
+Geometric correction,
+Spelling correction,
+Watermark removal,
+Text restoration
+
+Related:
+Low-level processing
+</Description>
+      </LabelType>
+      <LabelType caption="Enrichment" name="enrichment">
+        <Description>Adding data to increase information content
+
+Examples:
+Adding metadata
+
+Related:
+Part-of-speech tagging</Description>
+        <LabelType caption="Annotation / labelling" name="annotation">
+          <Description>Localised addition of information.
+
+Examples:
+Part-of-speech tagging,
+Named entitiy tagging,
+Page layout annotation (regions etc.)
+
+Related:
+Segmentation</Description>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Information extraction" name="extraction">
+        <Description>Information extraction (IE) is the task of automatically extracting structured information from unstructured and/or semi-structured machine-readable documents. In most of the cases this activity concerns processing human language texts by means of natural language processing (NLP).
+
+Examples:
+Language and vocabulary analysis,
+Image understanding
+
+Related:
+High-level processing
+Content analysis and recognition</Description>
+      </LabelType>
+      <LabelType caption="Visualisation / presentation" name="visualisation">
+        <Description>Information visualisation is the study of (interactive) visual representations of abstract data to reinforce human cognition. The abstract data include both numerical and non-numerical data, such as text and geographic information.
+
+Examples:
+Text rendering
+Chart creation
+
+Related:
+Conversion
+Computer graphics</Description>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Adaptability / Applicability" name="adaptability">
+      <Description>How well can the activity adapt to different circumstances.
+
+Examples:
+Trainable method,
+Interactive system</Description>
+      <LabelType caption="Configurable" name="configurable">
+        <Description>A method that can be configured in some way to allow the explicit adaption to different use cases.
+
+Examples:
+OCR with settings for language, font etc.
+
+Related:
+Interactive
+Generic / unconstraint</Description>
+      </LabelType>
+      <LabelType caption="Trainable" name="trainable">
+        <Description>A method that can be trained by examples.
+
+Examples:
+OCR training to support a new type of font
+
+Related:
+Configurable,
+Interactive,
+Generic / unconstraint</Description>
+        <LabelType caption="Supervised" name="supervised">
+          <Description>Supervised learning is the machine learning task of inferring a function from labeled training data.[1] The training data consist of a set of training examples. In supervised learning, each example is a pair consisting of an input object (typically a vector) and a desired output value (also called the supervisory signal). A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples.
+
+Examples:
+Labelled character images for training an OCR engine
+
+Related:
+Configurable
+Interactive</Description>
+        </LabelType>
+        <LabelType caption="Unsupervised" name="unsupervised">
+          <Description>Unsupervised learning is the machine learning task of inferring a function to describe hidden structure from unlabeled data. Since the examples given to the learner are unlabeled, there is no error or reward signal to evaluate a potential solution. This distinguishes unsupervised learning from supervised learning and reinforcement learning.
+
+Examples:
+Clustering
+
+Related:
+Machine learning</Description>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Interactive" name="interactive">
+        <Description>A method that adapts according to user interaction.
+
+Examples:
+Dictionary expansion during spell checking
+
+Related:
+Configurable,
+Trainable</Description>
+      </LabelType>
+      <LabelType caption="Generic / unconstraint" name="generic">
+        <Description>Method with wide applicability which therefore may not need to be trained or configured.
+
+Examples:
+Google multi-language OCR
+
+Related:
+Trainable,
+Configurable</Description>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Maturity" name="maturity">
+      <Description>System / method/ algorithm maturity.
+
+Examples:
+Prototype,
+Production system
+
+Related:
+Licence</Description>
+      <LabelType caption="Stable" name="stable">
+        <Description>A stable release is available</Description>
+      </LabelType>
+      <LabelType caption="Experimental" name="experimental">
+        <Description>Experimental, in development, prototype</Description>
+      </LabelType>
+      <LabelType caption="Industrial" name="industrial">
+        <Description>Production-strengh method / system that is reliable, tested, and robust</Description>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Original Source" name="originalSource">
+      <Description>Disregarding the current form of the data, where does it originate from, what was the original medium?</Description>
+      <LabelType caption="Produced data" name="produced">
+        <Description>Data that has been composed, created, produced or rendered in some form.
+
+Examples:
+Book,
+Website
+
+Related:
+Content Encoding</Description>
+        <LabelType caption="Physical source medium" name="physical">
+          <Description>The data was orininally part of a physical medium
+
+Examples:
+Newspaper
+Whiteboard writing
+
+Related:
+Physical production method</Description>
+          <LabelType caption="Paper document" name="paper">
+            <Description>The data was orignially produced on paper
+
+Example:
+Printed magazine
+
+Related:
+Age</Description>
+            <LabelType caption="Book" name="book">
+              <Description>A paper book
+
+Examples:
+Notebook,
+Novel
+
+Related:
+Physical production method</Description>
+            </LabelType>
+            <LabelType caption="Newspaper" name="newspaper">
+              <Description>A printed newspaper
+
+Examples:
+The Guardian
+
+Related:
+Physical production method</Description>
+            </LabelType>
+            <LabelType caption="Magazine" name="magazine">
+              <Description>A printed magazine.
+
+Usyually with more complex layout and formatting in comparison to books or newspapers.
+
+Examples:
+Time magazine
+
+Related:
+Physical production method</Description>
+            </LabelType>
+            <LabelType caption="Journal" name="journal">
+              <Description>A printed journal
+
+Examples:
+Science journal
+
+Related:
+Physical production method</Description>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="Whiteboard / blackboard" name="whiteboard">
+            <Description>The data was originally produced on a whiteboard / flipchart / blackboard
+
+Examples:
+Whiteboard bullet points from a meeting
+
+Related:
+Physical production method</Description>
+          </LabelType>
+          <LabelType caption="Poster" name="poster">
+            <Description>A poster or board of some kind
+
+Examples:
+A poster for a research paper
+
+Related:
+Physical production method</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Virtual source medium" name="virtual">
+          <Description>The data was created in / for the virtual space (digital)
+
+Examples:
+Word processor document
+
+Related:
+Content encoding</Description>
+          <LabelType caption="World Wide Web" name="www">
+            <Description>The data was created for the Internet.
+
+Examples:
+Wikipedia page
+
+Related:
+Data conversion,
+Visualisation</Description>
+          </LabelType>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Captured data" name="captured">
+        <Description>Data captured from the real world / the environment
+
+Examples:
+Photograph of a street
+
+Related:
+Acquisition</Description>
+        <LabelType caption="Real / natural scenes" name="scenes">
+          <Description>Scenes captured from the world
+
+Examples:
+A picture of a room with people
+
+Related:
+Acquisition</Description>
+          <LabelType caption="3D scenes" name="3D">
+            <Description>Threedimensional scenes captured somehow</Description>
+          </LabelType>
+        </LabelType>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Acquisition / Replication Method" name="acquisition">
+      <Description>Involved methods that lead from the source medium to the current state / format
+
+Examples:
+Scanning,
+Photocopying
+
+Related:
+Physical production method,
+Source medium</Description>
+      <LabelType caption="Analog / physical to digital" name="analogToDigital">
+        <Description>Conversion from any form of analog or physical data / medium to digital form.
+
+Examples:
+Digital photography,
+Scanning
+
+Related:
+Source medium</Description>
+        <LabelType caption="Scanning" name="scanning">
+          <Description>Capturing with digital scanner
+
+Examples:
+Flatbed scanner
+
+Related:
+Acquisition</Description>
+        </LabelType>
+        <LabelType caption="Camera" name="camera">
+          <Description>Camera-based digitisation
+
+Examples:
+Overhead scanner,
+Smartphone document capture
+
+Related:
+Acquisition method</Description>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Copied" name="copied">
+        <Description>Replicated in some way</Description>
+        <LabelType caption="Photocopy" name="photocopy">
+          <Description>A document that was photocopied at some point</Description>
+        </LabelType>
+        <LabelType caption="Carbon copy" name="carbon-copy">
+          <Description>The document is a carbon copy</Description>
+        </LabelType>
+        <LabelType caption="Microfilm / microfiche" name="microfilm">
+          <Description>The document copied to microfilm or microfiche at some point</Description>
+        </LabelType>
+        <LabelType caption="Faxed" name="fax">
+          <Description>The document was faxed (using a fax machine)</Description>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Synthesis" name="synthesis">
+        <Description>The combination of components or elements to form a connected whole
+
+Examples:
+Artificial ground truth (e.g. a synthetic newspaper page)
+
+Related:
+Acquisition
+Source medium</Description>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Content of Interest" name="contentOfInterest">
+      <Description>Source / target content. What is the intersting bit in the data at hand.</Description>
+      <LabelType caption="Visual content" name="visual">
+        <LabelType caption="Text" name="text"/>
+        <LabelType caption="Graphical" name="graphical">
+          <LabelType caption="Separators" name="separator"/>
+          <LabelType caption="Barcode / QR code" name="barcode">
+            <Description>A barcode is a machine-readable representation of data relating to the object to which it is attached. Originally barcodes systematically represented data by varying the widths and spacings of parallel lines, and may be referred to as linear or one-dimensional (1D). Later two-dimensional (2D) codes were developed, using rectangles, dots, hexagons and other geometric patterns in two dimensions, usually called barcodes although they do not use bars as such. Barcodes originally were scanned by special optical scanners called barcode readers. Later applications software became available for devices that could read images, such as smartphones with cameras.&#13;
+&#13;
+Examples:&#13;
+- Barcode on a product&#13;
+- QR code representing a weblink&#13;
+</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Image" name="image">
+          <LabelType caption="Photograph" name="photograph">
+            <LabelType caption="Person(s)" name="person">
+              <LabelType caption="Face(s)" name="face"/>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="Drawing" name="drawing"/>
+        </LabelType>
+        <LabelType caption="Mixed / composite content" name="composite">
+          <LabelType caption="Tables / forms" name="tables"/>
+          <LabelType caption="Charts" name="charts"/>
+          <LabelType caption="Maps / plans" name="maps"/>
+          <LabelType caption="Mathematical expression" name="maths"/>
+          <LabelType caption="Chemical notation" name="chem"/>
+          <LabelType caption="Musical notation" name="music"/>
+        </LabelType>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Data Granularity" name="granularity">
+      <LabelType caption="Physical / visual granularity" name="physical">
+        <Description>E.g. segmentation</Description>
+        <LabelType caption="Document-related" name="document-related">
+          <LabelType caption="Page" name="page"/>
+          <LabelType caption="Region / Zone" name="region">
+            <Description>Region, zone, block</Description>
+          </LabelType>
+          <LabelType caption="Text line" name="text-line"/>
+          <LabelType caption="Word" name="word">
+            <Description>Word or partial word, if separated by line break, for example</Description>
+          </LabelType>
+          <LabelType caption="Glyph" name="glyph">
+            <Description>In typography, a glyph is an elemental symbol within an agreed set of symbols, intended to represent a readable character for the purposes of writing</Description>
+          </LabelType>
+          <LabelType caption="Double-page" name="double-page">
+            <Description>Two facing pages (e.g. in book)</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Natural language-related" name="natural-language">
+          <LabelType caption="Sentence" name="sentence"/>
+          <LabelType caption="Token / chunk" name="token"/>
+          <LabelType caption="Syllable" name="syllable"/>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Logical granularity" name="logical">
+        <LabelType caption="Document-related" name="document-related">
+          <LabelType caption="Document" name="document">
+            <Description>A complete document
+
+Examples:
+Book</Description>
+          </LabelType>
+          <LabelType caption="Chapter" name="chapter"/>
+          <LabelType caption="Section" name="section"/>
+          <LabelType caption="Article" name="article"/>
+          <LabelType caption="Paragraph" name="paragraph"/>
+        </LabelType>
+        <LabelType caption="Table" name="table">
+          <Description>A table with columns and rows</Description>
+          <LabelType caption="Column" name="column">
+            <Description>Table column</Description>
+          </LabelType>
+          <LabelType caption="Row" name="row">
+            <Description>Table row</Description>
+          </LabelType>
+          <LabelType caption="Cell" name="cell">
+            <Description>Table cell</Description>
+          </LabelType>
+        </LabelType>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Data Condition" name="condition">
+      <Description>Degradation, aging, damage etc.</Description>
+      <LabelType caption="Noisy" name="noise">
+        <LabelType caption="Speckles" name="speckles">
+          <Description>Speckle-like noise</Description>
+          <LabelType caption="Salt-and-pepper noise" name="salt-and-pepper">
+            <Description>Small, bright and dark dot-like noise</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Clutter" name="clutter">
+          <Description>Larger noise 'objects'</Description>
+          <LabelType caption="Thresholding related noise" name="thresholding-related">
+            <Description>Image thresholding / binarisation-related noise</Description>
+          </LabelType>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Production-related" name="production-related">
+        <Description>Conditions introduced during the production of the medium / object</Description>
+        <LabelType caption="Document characteristics" name="document-characteristics">
+          <Description>Document-related charactersitics</Description>
+          <LabelType caption="Pasted clippings" name="pasted-clippings">
+            <Description>Paper clippings pasted onto a page</Description>
+          </LabelType>
+          <LabelType caption="Textured paper" name="textured-paper">
+            <Description>Paper with a visible texture</Description>
+          </LabelType>
+          <LabelType caption="Uneven character spacing" name="uneven-character-spacing">
+            <Description>Intra-word and inter-word character spacing is not uniform</Description>
+          </LabelType>
+          <LabelType caption="Narrow border" name="narrow-border">
+            <Description>The content of a page reaches very close to the page border or even touches it</Description>
+          </LabelType>
+          <LabelType caption="Low paper-to-content contrast" name="low-contrast">
+            <Description>The contrast bwtween the paper and the page content is very low</Description>
+          </LabelType>
+          <LabelType caption="Halftoning" name="halftoning">
+            <Description>Dot-based halftoning printing technique was used (to emulate more colours / grey tones)</Description>
+          </LabelType>
+          <LabelType caption="Dithering" name="dithering">
+            <Description>Dithering printing technique was used (added randomness to avoid unwanted patterns)</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Document faults" name="document-faults">
+          <Description>Fault introduced during document production</Description>
+          <LabelType caption="Bleed-through" name="bleed-through">
+            <Description>Ink bled through from back of page</Description>
+          </LabelType>
+          <LabelType caption="Ink from facing page" name="ink-from-facing">
+            <Description>Ink from facing page was transferred to this page</Description>
+          </LabelType>
+          <LabelType caption="Smeared ink" name="smeared-ink">
+            <Description>Ink was smeared after printing / writing</Description>
+          </LabelType>
+          <LabelType caption="Touching characters" name="touching-chars">
+            <Description>Independent characters are touching due to printing issues</Description>
+            <LabelType caption="Horizontally touching characters" name="horizontally">
+              <Description>Neighbouring characters within one text line are touching</Description>
+            </LabelType>
+            <LabelType caption="Vertically touching characters" name="vertically">
+              <Description>Characters from neighbouring text lines are touching each other</Description>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="Uneven ink distribution" name="uneven-ink-distrib">
+            <Description>The ink was not distributed properly during printing, leading to unwanted empty or faint regions</Description>
+          </LabelType>
+          <LabelType caption="Filled-in characters" name="filled-in-chars">
+            <Description>Gaps or holes in characters are filled in (e.g. due to too much ink)</Description>
+          </LabelType>
+          <LabelType caption="Sort shoulder artefacts" name="sort-shoulder-artefacts">
+            <Description>Sort shoulder parts touched the paper during printing, leading to visible artefacts around characters</Description>
+          </LabelType>
+          <LabelType caption="Broken characters" name="broken-chars">
+            <Description>Some print characters were broken (bits missing) leading to repeated visible defects</Description>
+          </LabelType>
+          <LabelType caption="Faint characters" name="faint-chars">
+            <Description>Faint individual characters, e.g. when not using enough force during typewriting </Description>
+          </LabelType>
+          <LabelType caption="Blurred characters" name="blurred-chars">
+            <Description>Blurred characters due to production issues</Description>
+          </LabelType>
+          <LabelType caption="Non-straight text lines" name="non-straight-text-lines">
+            <Description>Text lines were not printed straight (printing issue / limitation)</Description>
+          </LabelType>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Wear / use" name="wear">
+        <LabelType caption="Medium damage" name="medium-damage">
+          <Description>The medium (e.g. paper) is damaged in some way</Description>
+          <LabelType caption="Folds" name="folds">
+            <Description>E.g. paper folds</Description>
+          </LabelType>
+          <LabelType caption="Tears" name="tears">
+            <Description>Medium is torn</Description>
+          </LabelType>
+          <LabelType caption="Holes" name="holes">
+            <Description>Any kind of holes in the medium</Description>
+            <LabelType caption="Punch holes" name="punch-holes">
+              <Description>Punch holes visible</Description>
+            </LabelType>
+            <LabelType caption="Unintended holes" name="unintended">
+              <Description>Holes / missing parts in the medium due to damage</Description>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="Missing parts" name="missing-parts">
+            <Description>Whole parts of the medium are missing (e.g. torn off)</Description>
+          </LabelType>
+          <LabelType caption="Stains" name="stains">
+            <Description>Noticeable stains on medium</Description>
+          </LabelType>
+          <LabelType caption="Scratches" name="scratches">
+            <Description>E.g. microfilm scratches</Description>
+          </LabelType>
+          <LabelType caption="Staples" name="staples">
+            <Description>Visible staples</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Additions" name="additions">
+          <Description>Things added to the medium during use</Description>
+          <LabelType caption="Visible repairs" name="repairs">
+            <Description>The medium was visibly repaired</Description>
+            <LabelType caption="Paper repairs" name="paper-repairs">
+              <Description>Paper was reapaired (e.g. with patches)</Description>
+            </LabelType>
+            <LabelType caption="Clear tape" name="clear-tape">
+              <Description>Clear tape, visible through replections or darker colour</Description>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="Informative additions" name="informative">
+            <Description>Additions containing information</Description>
+            <LabelType caption="Annotations" name="annotations">
+              <Description>Annotations regarding the content</Description>
+            </LabelType>
+            <LabelType caption="Stamps" name="stamps">
+              <Description>The medium was stamped</Description>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="Corrections" name="corrections">
+            <Description>Content corrections</Description>
+            <LabelType caption="Manual corrections" name="manual">
+              <Description>E.g. handwritten corrections of printed content</Description>
+            </LabelType>
+          </LabelType>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Ageing" name="ageing">
+        <Description>Ageing or preservation-related issues</Description>
+        <LabelType caption="Warping" name="warping">
+          <Description>Arbitrary warping (e.g. due to moisture)</Description>
+        </LabelType>
+        <LabelType caption="Discolouration" name="discolouration">
+          <Description>Discolouration of the medium of any kind</Description>
+          <LabelType caption="Global discolouration" name="global">
+            <Description>E.g. yellowish teint</Description>
+          </LabelType>
+          <LabelType caption="Discoloured edges" name="edges">
+            <Description>Local discolouration of the edges of the medium</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Disintegration" name="disintegraion">
+          <Description>Disintegration of medium</Description>
+          <LabelType caption="Uneven edges" name="uneven-edges">
+            <Description>Uneven medium edges due to disintegration</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Mould" name="mould">
+          <Description>Visible damage through mould</Description>
+        </LabelType>
+        <LabelType caption="Faded content" name="faded-content">
+          <Description>Faded content (e.g. due to sunlight)</Description>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Acquisition / conversion-related issues" name="acquisition">
+        <LabelType caption="Geometric issues" name="geometric">
+          <Description>Geometric distortions etc.</Description>
+          <LabelType caption="Skew" name="skew">
+            <Description>Skew / rotation</Description>
+            <LabelType caption="Global skew" name="global">
+              <Description>The whole page is skewed</Description>
+            </LabelType>
+            <LabelType caption="Non-uniform skew" name="non-uniform">
+              <Description>Non-uniform skew, e.g. due to faulty scan feed</Description>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="90 degree rotation" name="90-degree-rotation">
+            <Description>Page rotated 90 degree left or right</Description>
+          </LabelType>
+          <LabelType caption="Upside down" name="upside-down">
+            <Description>The object is represented upside down (e.g. scanned the wrong way around)</Description>
+          </LabelType>
+          <LabelType caption="Perspective distortions" name="perspective-distortions">
+            <Description>Perspective distortions (e.g. due to camera-based acquisition)</Description>
+          </LabelType>
+          <LabelType caption="Page curl" name="page-curl">
+            <Description>Visible page curl (e.g. book scanning)</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Content- or background-related issues" name="content-or-background">
+          <Description>Content- or background-related issues</Description>
+          <LabelType caption="Incomplete capture" name="incomplete-capture">
+            <Description>Not the whole content was captured during acquisition or copying</Description>
+          </LabelType>
+          <LabelType caption="Tight margins" name="tight-margins">
+            <Description>Tight / narrow margins</Description>
+          </LabelType>
+          <LabelType caption="Included other objects" name="included-objects">
+            <Description>Foreign objects visible</Description>
+            <LabelType caption="Part of preceeding or succeeding object" name="preceeding-or-proceeding">
+              <Description>Part of preceeding or succeeding object included (e.g. other page)</Description>
+            </LabelType>
+            <LabelType caption="Medium structure" name="medium-structure">
+              <Description>Medium structure visible (e.g. book cover)</Description>
+            </LabelType>
+            <LabelType caption="Paper clips" name="clips">
+              <Description>Paper clips visible</Description>
+            </LabelType>
+            <LabelType caption="Fingers" name="fingers">
+              <Description>Fingers visible</Description>
+            </LabelType>
+            <LabelType caption="Insects" name="insects">
+              <Description>Insects visible</Description>
+            </LabelType>
+            <LabelType caption="Background" name="background">
+              <Description>Unwanted background visible (e.g. scanner bed)</Description>
+            </LabelType>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Method flaws" name="method-flaws">
+          <Description>Scanning or reproduction method flaws / issues</Description>
+          <LabelType caption="Imaging-related" name="imaging">
+            <Description>Imaging-related flaws</Description>
+            <LabelType caption="Show-through" name="show-through">
+              <Description>Parts of other page showing through (e.g. due to thin paper)</Description>
+            </LabelType>
+            <LabelType caption="Uneven illumination" name="uneven-illumination">
+              <Description>Uneven illumination leading to brightness or contrast variations</Description>
+              <LabelType caption="Shadows" name="shadows">
+                <Description>Shadows visible</Description>
+              </LabelType>
+            </LabelType>
+            <LabelType caption="Out-of-focus" name="out-of-focus">
+              <Description>Object was not properly focused leading to blur</Description>
+            </LabelType>
+            <LabelType caption="Low contrast" name="low-contrast">
+              <Description>Low image contrast</Description>
+            </LabelType>
+            <LabelType caption="Missing / changed content" name="missing-content">
+              <Description>Some of the original content is missing or changed</Description>
+              <LabelType caption="Loss through thresholding" name="thresholding">
+                <Description>Content or information loss due to thresholding / binaristaion</Description>
+              </LabelType>
+            </LabelType>
+          </LabelType>
+        </LabelType>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Data Attributes / Properties" name="data-attributes">
+      <LabelType caption="Language" name="language">
+        <Description>Language(s) of data</Description>
+        <LabelType caption="Natural language" name="natural">
+          <Description>E.g. a spoken language</Description>
+          <LabelType caption="English" name="english">
+            <Description>English language</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Mixed languages" name="mixed">
+          <Description>More than one language used</Description>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Document-related" name="document-related">
+        <Description>Document attributes</Description>
+        <LabelType caption="Visual properties" name="visual">
+          <Description>Any visual properties / attributes</Description>
+          <LabelType caption="Text-related" name="text">
+            <Description>Text attributes</Description>
+            <LabelType caption="Script" name="script">
+              <Description>Text script</Description>
+              <LabelType caption="Latin" name="latin">
+                <Description>Latin script</Description>
+              </LabelType>
+              <LabelType caption="Braille" name="braille">
+                <Description>Braille script</Description>
+              </LabelType>
+            </LabelType>
+            <LabelType caption="Font-related" name="font">
+              <Description>Font attributes</Description>
+              <LabelType caption="Cursive font" name="cursive">
+                <Description>Cursive font (italics or handwritten)</Description>
+              </LabelType>
+              <LabelType caption="Monospace" name="monospace">
+                <Description>Monospace font (all characters have the same width)</Description>
+              </LabelType>
+              <LabelType caption="Hand / typeface class" name="typeface">
+                <Description>General typeface or hand</Description>
+                <LabelType caption="Blackletter" name="blackletter">
+                  <Description>Blackletter, gothic, Fraktur</Description>
+                </LabelType>
+                <LabelType caption="Antiqua" name="antiqua">
+                  <Description>Antiqua font (more modern)</Description>
+                </LabelType>
+                <LabelType caption="Medieval manuscript" name="manuscript">
+                  <Description>Print-like manuscript font</Description>
+                </LabelType>
+              </LabelType>
+              <LabelType caption="Decorated text" name="decorated">
+                <Description>Text decorations to highlight or beautify</Description>
+                <LabelType caption="Flourishes" name="flourishes">
+                  <Description>Flourishes added to the characters</Description>
+                </LabelType>
+                <LabelType caption="Multiple colours" name="multi-colour">
+                  <Description>Multiple colours used for text (e.g. in one text line)</Description>
+                </LabelType>
+                <LabelType caption="Reverse video" name="reverse-video">
+                  <Description>Dark background, bright text colour</Description>
+                </LabelType>
+              </LabelType>
+              <LabelType caption="Multi-font" name="multi-font">
+                <Description>Multiple fonts used</Description>
+                <LabelType caption="Mixed typefaces" name="typefaces">
+                  <Description>More than one typeface used</Description>
+                </LabelType>
+                <LabelType caption="Mixed font sizes" name="font-sizes">
+                  <Description>More than one font size used</Description>
+                </LabelType>
+              </LabelType>
+            </LabelType>
+            <LabelType caption="Drop caps" name="drop-caps">
+              <Description>Drap capitals (large capitals at beginning of paragraph)</Description>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="Columns" name="columns">
+            <Description>The content is arranged in columns or one column</Description>
+            <LabelType caption="One column" name="one">
+              <Description>One-column text</Description>
+            </LabelType>
+            <LabelType caption="Two columns" name="two">
+              <Description>Two-column text</Description>
+            </LabelType>
+            <LabelType caption="Multiple columns" name="multiple">
+              <Description>Multi-column text (more than two)</Description>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="Rotated content" name="rotated-content">
+            <Description>Some content is rotated with respect to other content</Description>
+          </LabelType>
+          <LabelType caption="Complex background" name="complex-background">
+            <Description>Background not just plain white / colour</Description>
+            <LabelType caption="Watermarks" name="watermarks">
+              <Description>Watermark(s) in background</Description>
+            </LabelType>
+            <LabelType caption="Impressions / embossings" name="impressions">
+              <Description>Impressions / embossings visible</Description>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="Illustrations" name="illustrations">
+            <Description>Illustrations in content</Description>
+            <LabelType caption="Multi-colour illustrations" name="multi-colour">
+              <Description>Multi-colour illustrations in content</Description>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="Decorations" name="decorations">
+            <Description>Decorations of some kind</Description>
+            <LabelType caption="Frames / borders" name="frames">
+              <Description>Some content enclosed in frames or borders</Description>
+            </LabelType>
+          </LabelType>
+          <LabelType caption="Line drawings / line art" name="line-art">
+            <Description>Line drawings / line art</Description>
+          </LabelType>
+          <LabelType caption="CAPTCHAs" name="captchas">
+            <Description>CAPTCHAs to verify a human user</Description>
+          </LabelType>
+        </LabelType>
+        <LabelType caption="Structural" name="structural">
+          <Description>Document structure-related</Description>
+          <LabelType caption="Running titles" name="running-titles">
+            <Description>Titles repeated each page</Description>
+          </LabelType>
+          <LabelType caption="Footnotes" name="footnotes">
+            <Description>Footnotes at bottom of page</Description>
+          </LabelType>
+          <LabelType caption="Bibliographic references" name="references">
+            <Description>Bibliographic references on page</Description>
+          </LabelType>
+        </LabelType>
+      </LabelType>
+    </LabelType>
+    <LabelType caption="Topic" name="topic">
+      <LabelType caption="Economy" name="economy">
+        <LabelType caption="Financial / business" name="financial">
+          <LabelType caption="Bank checks" name="checks"/>
+          <LabelType caption="Invoices" name="invoices"/>
+          <LabelType caption="Bank notes / paper currency" name="bank-notes"/>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Social science / environmental" name="social-science">
+        <LabelType caption="Maps" name="maps">
+          <LabelType caption="Topographical maps" name="topographical"/>
+          <LabelType caption="Road maps" name="road"/>
+          <LabelType caption="Land use maps" name="land-use"/>
+        </LabelType>
+        <LabelType caption="Traffic and automotive" name="traffic">
+          <LabelType caption="Number plates" name="number-plates"/>
+          <LabelType caption="Traffic signs" name="signs"/>
+        </LabelType>
+      </LabelType>
+      <LabelType caption="Science and Engineering" name="engineering">
+        <LabelType caption="Architectural" name="architecture">
+          <LabelType caption="Floor plans" name="floor-plans"/>
+          <LabelType caption="Architectural drawings" name="drawings"/>
+        </LabelType>
+        <LabelType caption="Medical" name="medical"/>
+        <LabelType caption="Engineering drawings" name="engineering-drawings"/>
+        <LabelType caption="Patents" name="patents"/>
+      </LabelType>
+      <LabelType caption="Media / entertainment" name="media">
+        <LabelType caption="Advertisements" name="adverts"/>
+      </LabelType>
+      <LabelType caption="Computing" name="computing"/>
+    </LabelType>
+    <LabelType caption="User Groups" name="user-groups">
+      <LabelType caption="Administrators" name="admins"/>
+      <LabelType caption="Workflow System Experts" name="workflow-experts"/>
+      <LabelType caption="Domain Experts" name="domain-experts">
+        <LabelType caption="Document Analysis Experts" name="dia"/>
+        <LabelType caption="Librarians" name="librarians"/>
+      </LabelType>
+    </LabelType>
+  </LabelTypeHierarchies>
+  <ActivityLabelSlots>
+    <LabelSlotGroup name="automation" slots="1"/>
+    <LabelSlotGroup name="license" slots="2"/>
+    <LabelSlotGroup name="platform" slots="10"/>
+    <LabelSlotGroup name="activityDomain" slots="10"/>
+    <LabelSlotGroup name="processingLevel" slots="10"/>
+    <LabelSlotGroup name="dataTransformation" slots="10"/>
+    <LabelSlotGroup name="adaptability" slots="4"/>
+    <LabelSlotGroup name="maturity" slots="1"/>
+  </ActivityLabelSlots>
+  <DataObjectLabelSlots>
+    <LabelSlotGroup name="originalSource" slots="1"/>
+    <LabelSlotGroup name="age" slots="4"/>
+    <LabelSlotGroup name="production-method" slots="1"/>
+    <LabelSlotGroup name="acquisition" slots="5"/>
+    <LabelSlotGroup name="precision" slots="1"/>
+    <LabelSlotGroup name="content-type" slots="5"/>
+    <LabelSlotGroup name="content-encoding" slots="1"/>
+    <LabelSlotGroup name="contentOfInterest" slots="10"/>
+    <LabelSlotGroup name="granularity" slots="10"/>
+    <LabelSlotGroup name="condition" slots="10"/>
+    <LabelSlotGroup name="data-attributes" slots="10"/>
+    <LabelSlotGroup name="topic" slots="1"/>
+  </DataObjectLabelSlots>
+  <UserLabelSlots>
+    <LabelSlotGroup name="user-groups" slots="10"/>
+  </UserLabelSlots>
+  <MigrationRules version="1">
+    <SourceType id="processing-type.acquisition">
+      <TargetType id="dataTransformation.acquisition"/>
+    </SourceType>
+    <SourceType id="domain.dia.segmentation.word">
+      <TargetType id="granularity.physical.document-related.word"/>
+    </SourceType>
+    <SourceType id="digitisation-method.scanner">
+      <TargetType id="acquisition.analogToDigital.scanning"/>
+    </SourceType>
+    <SourceType id="processing-type.performance-evaluation.comparative">
+      <TargetType id="activityDomain.computing.performanceEval.comparative"/>
+    </SourceType>
+    <SourceType id="source-medium.virtual">
+      <TargetType id="originalSource.produced.virtual"/>
+    </SourceType>
+    <SourceType id="domain.dia.segmentation.region">
+      <TargetType id="granularity.physical.document-related.region"/>
+    </SourceType>
+    <SourceType id="domain.dia.segmentation">
+      <TargetType id="granularity.physical.document-related"/>
+    </SourceType>
+    <SourceType id="domain.dia.image-processing">
+      <TargetType id="contentOfInterest.visual"/>
+    </SourceType>
+    <SourceType id="processing-type.enhancement">
+      <TargetType id="dataTransformation.enhancement"/>
+    </SourceType>
+    <SourceType id="source-medium.physical">
+      <TargetType id="originalSource.produced.physical"/>
+    </SourceType>
+    <SourceType id="domain.dia">
+      <TargetType id="contentOfInterest.visual"/>
+    </SourceType>
+    <SourceType id="domain.dia.segmentation.glyph">
+      <TargetType id="granularity.physical.document-related.glyph"/>
+    </SourceType>
+    <SourceType id="processing-type.performance-evaluation.in-depth">
+      <TargetType id="activityDomain.computing.performanceEval.in-depth"/>
+    </SourceType>
+    <SourceType id="domain.dia.classification">
+      <TargetType id="content-type.metadata.annotations"/>
+      <TargetType id="granularity.physical.document-related.region"/>
+    </SourceType>
+    <SourceType id="domain.dia.recognition.structure">
+      <TargetType id="content-type.metadata.structure"/>
+    </SourceType>
+    <SourceType id="processing-type.analysis">
+      <TargetType id="processingLevel.high-level.classification"/>
+    </SourceType>
+    <SourceType id="digitisation-method.camera">
+      <TargetType id="acquisition.analogToDigital.camera"/>
+    </SourceType>
+    <SourceType id="domain.text-processing.annotating">
+      <TargetType id="content-type.metadata.annotations"/>
+    </SourceType>
+    <SourceType id="processing-type.conversion">
+      <TargetType id="dataTransformation.conversion"/>
+    </SourceType>
+    <SourceType id="source-medium.physical.book">
+      <TargetType id="originalSource.produced.physical.paper.book"/>
+    </SourceType>
+    <SourceType id="domain.dia.recognition.structure.reading-order">
+      <TargetType id="content-type.metadata.structure"/>
+    </SourceType>
+    <SourceType id="processing-type.visualisation">
+      <TargetType id="dataTransformation.visualisation"/>
+    </SourceType>
+    <SourceType id="source-medium.physical.newspaper">
+      <TargetType id="originalSource.produced.physical.paper.newspaper"/>
+    </SourceType>
+    <SourceType id="content-type.metadata.general">
+      <TargetType id="content-type.metadata"/>
+    </SourceType>
+    <SourceType id="domain.dia.recognition.ocr">
+      <TargetType id="contentOfInterest.visual.text"/>
+    </SourceType>
+    <SourceType id="domain.text-processing.tokenisation">
+      <TargetType id="granularity.physical.natural-language.token"/>
+    </SourceType>
+    <SourceType id="processing-type.performance-evaluation">
+      <TargetType id="activityDomain.computing.performanceEval"/>
+    </SourceType>
+    <SourceType id="processing-type.info-extraction">
+      <TargetType id="dataTransformation.extraction"/>
+    </SourceType>
+    <SourceType id="domain.dia.segmentation.text-line">
+      <TargetType id="granularity.physical.document-related.text-line"/>
+    </SourceType>
+    <SourceType id="domain.text-processing.annotating.pos-tagging">
+      <TargetType id="content-type.metadata.annotations"/>
+    </SourceType>
+  </MigrationRules>
+  <MigrationRules version="2">
+    <SourceType id="data-attributes.text-related.visual.line-drawing">
+      <TargetType id="data-attributes.document-related.visual.line-art"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.language.natural.english">
+      <TargetType id="data-attributes.language.natural.english"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.visual">
+      <TargetType id="data-attributes.document-related.visual"/>
+    </SourceType>
+    <SourceType id="condition.production-faults">
+      <TargetType id="condition.production-related.document-faults"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.visual.complex-background.watermarks">
+      <TargetType id="data-attributes.document-related.visual.complex-background.watermarks"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.language">
+      <TargetType id="data-attributes.language"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.visual.multi-font">
+      <TargetType id="data-attributes.document-related.visual.text.font.multi-font"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.visual.CAPTCHA">
+      <TargetType id="data-attributes.document-related.visual.captchas"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.script">
+      <TargetType id="data-attributes.document-related.visual.text.script"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.visual.cursive">
+      <TargetType id="data-attributes.document-related.visual.text.font.cursive"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.script.braille">
+      <TargetType id="data-attributes.document-related.visual.text.script.braille"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.language.natural">
+      <TargetType id="data-attributes.language.natural"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.structural.footnotes">
+      <TargetType id="data-attributes.document-related.structural.footnotes"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.visual.drop-caps">
+      <TargetType id="data-attributes.document-related.visual.text.drop-caps"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.visual.complex-background">
+      <TargetType id="data-attributes.document-related.visual.complex-background"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.structural.reference">
+      <TargetType id="data-attributes.document-related.structural.references"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.structural">
+      <TargetType id="data-attributes.document-related.structural"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related.structural.running-titles">
+      <TargetType id="data-attributes.document-related.structural.running-titles"/>
+    </SourceType>
+    <SourceType id="data-attributes.text-related">
+      <TargetType id="data-attributes.document-related.visual.text"/>
+    </SourceType>
+  </MigrationRules>
+</Ontology>

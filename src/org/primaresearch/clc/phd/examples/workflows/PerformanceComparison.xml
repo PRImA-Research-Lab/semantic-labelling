@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow name="PerformanceComparison" version="1.0" author="clc">
+	<description>Comparison of performance of document image analysis methods.</description>
+	<directedGraph id="PerformanceDataGeneration">
+		<head>
+			<label type="application.performance-analysis.comparison" />
+			<dataIn id="DatasetToBeProcessedByMethods" multiplicity="1..*">
+				<label type="application.data-processing" />
+			</dataIn>
+			<dataOut id="AveragePerformancePerMethod">
+				<label type="application.performance-analysis.comparison" />
+			</dataOut>
+		</head>
+		<body>
+			<node id="loop">
+				<for id="DataLoop">
+					<head>
+						<dataIn id="DataItemToBeProcessedByMethods" source="DatasetToBeProcessedByMethods">
+						</dataIn>
+						<dataOut id="PerformanceTable">
+						</dataOut>
+					</head>
+					<directedGraph id="RunMethodsAndBenchmark">
+						<head>
+							<dataIn id="DataItemToBeProcessedByMethods" source="DataItemToBeProcessedByMethods">
+							</dataIn>
+							<dataOut id="PerformanceTableEntries">
+							</dataOut>
+						</head>
+						<body>
+							<node id="method1">
+								<activity id="Method1" localname="method1">
+									<dataIn id="DataItemToBeProcessedByMethods" source="DataItemToBeProcessedByMethods">
+									</dataIn>
+									<dataOut id="AnalysisOrRecognitionResult1">
+									</dataOut>
+								</activity>
+							</node>
+							<node id="benchmarking1">
+								<predecessor id="method1"/>
+								<activity id="Benchmarking1" localname="Benchmarking">
+									<dataIn id="AnalysisOrRecognitionResult1" source="AnalysisOrRecognitionResult1">
+									</dataIn>
+									<dataOut id="PerformanceOfMethod1">
+									</dataOut>
+								</activity>
+							</node>
+							<node id="method2">
+								<activity id="Method2" localname="method2">
+									<dataIn id="DataItemToBeProcessedByMethods" source="DataItemToBeProcessedByMethods">
+									</dataIn>
+									<dataOut id="AnalysisOrRecognitionResult2">
+									</dataOut>
+								</activity>
+							</node>
+							<node id="benchmarking2">
+								<predecessor id="method2"/>
+								<activity id="Benchmarking1" localname="Benchmarking">
+									<dataIn id="AnalysisOrRecognitionResult2" source="AnalysisOrRecognitionResult2">
+									</dataIn>
+									<dataOut id="PerformanceOfMethod2">
+									</dataOut>
+								</activity>
+							</node>						
+							<node id="combine">
+								<predecessor id="benchmarking1"/>
+								<predecessor id="benchmarking2"/>
+								<activity id="CreateTableEntry">
+									<dataIn id="PerformanceOfMethod1" source="PerformanceOfMethod1">
+									</dataIn>
+									<dataIn id="PerformanceOfMethod2" source="PerformanceOfMethod2">
+									</dataIn>
+									<dataOut id="PerformanceTableEntry">
+									</dataOut>
+								</activity>
+							</node>						
+						</body>
+					</directedGraph>
+				</for>
+			</node>
+			<node id="average">
+				<predecessor id="loop" />
+				<activity id="AverageAndSort">
+					<dataIn id="PerformanceTableEntries" source="PerformanceTableEntries">
+					</dataIn>
+					<dataOut id="PerformanceTable">
+					</dataOut>
+				</activity>
+			</node>
+		</body>
+	</directedGraph>
+</workflow>
